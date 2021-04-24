@@ -266,12 +266,6 @@ section.our-works{
 
 				margin: 425px 0 0 273px;
 			}
-			img{
-				cursor:pointer;
-				width:100px;
-				height:100px;
-				margin: 225px 0 0 180px;
-			}
 		}
 		.img:nth-child(1){
 			background: url('img/Rectangle 15.png')
@@ -394,7 +388,7 @@ section.be-maecenas{
 		max-width: inherit;
 		display: flex;
 		justify-content: space-between;
-		align-items:center;
+
 		margin:0 auto 0;
 		.contacts{
 			vertical-align: top;
@@ -509,4 +503,122 @@ footer{
 		color: #989898;
 		max-width: 390px;
 	}
+}
+
+
+
+
+@media(max-width:1600px){
+	header{
+		nav{
+			max-width: 572px;
+			flex-wrap: wrap;
+			justify-content: center;
+			line-height:100px;
+			.number::after{
+				top:65px;
+			}
+		}
+		.main-block{
+			max-width: 600px;
+			margin:90px auto 405px;
+			.text-block{
+				max-width: inherit;
+				.theatre-name{font-size:72px;}
+				.theatre-is{max-width: inherit;}
+			}
+			.photo-block{
+				display: none;
+			}
+		}
+	}
+	section.our-works .content{
+		.img:last-child{
+			display: none;
+		}
+		.img{
+			.text-bottom{margin: 425px 0 0 135px;
+			}
+		}
+	}
+}
+
+@media(max-width: 1250px){
+	section.about-theatre{
+		max-width: 708px;
+		.content{
+			.picture{
+				display: none;
+			}
+		}
+	}
+	section.our-works .content{
+		max-width: 884px;
+		margin: 0 0 0 365px;
+		.img:nth-child(3){
+			display: none;
+		}
+	}
+	section.be-maecenas{
+		max-width: 690px;
+		.content{
+			flex-direction: column-reverse;
+			.contacts{
+				margin-top:80px;
+				display: flex;
+				justify-content: space-between;
+				.numbers{text-align: left;}
+				.address{text-align: right;}
+			}
+			.form{
+				max-width: inherit;
+				.fields{
+					max-width: inherit;
+					textarea{
+						width:250px;
+					}
+				}
+			}
+		}
+	}
+	section.our-partners{
+		margin:150px auto 0;
+		max-width: 800px;
+		.content{
+			img:last-child{display: none;}
+			img:nth-child(5){display: none;}
+		}
+	}
+	footer{
+		max-width:690px;
+	}
+}
+@media(max-width: 1000px){
+	header{
+		.main-block{
+			text-align: center;
+		}
+	}
+	section.under-our-works{
+		.content{
+			max-width:500px;
+			padding-top:160px;
+			.years{
+				p{
+					line-height: 65px!important;
+					font-size: 50px!important;
+				}
+			}
+			.features{
+				.text{
+					p{
+						line-height: 45px!important;
+						font-size: 25px!important;
+					}
+				}
+			}
+		}
+	}
+}
+@media(max-width: 900px){
 }
