@@ -1017,6 +1017,11 @@ footer p {
   }
 }
 @media (max-width: 450px) {
+  header nav ul.navigation-list li {
+    font-size: 18px;
+    line-height: 100px;
+  }
+
   section.under-our-works .content {
     padding-top: 80px;
   }
