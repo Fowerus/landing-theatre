@@ -13,9 +13,10 @@ header {
   background: url("img/Rectangle 3.png");
   height: 900px;
 }
+header .open-menu {
+  display: none;
+}
 header nav {
-  position: relative;
-  z-index: 1;
   text-transform: uppercase;
   padding-top: 51px;
   margin: 0 auto 0;
@@ -68,9 +69,18 @@ header nav .number::after {
   height: 2px;
   background: #D1A954;
 }
+header nav button.close-button {
+  position: absolute;
+  z-index: 7;
+  top: 27px;
+  left: 235px;
+  font-size: 38px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 header .main-block {
-  position: relative;
-  z-index: 1;
   max-width: 1035px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,7 +91,7 @@ header .main-block {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 90px 0 0 405px;
+  margin: 90px auto 405px;
 }
 header .main-block .text-block {
   color: white;
@@ -95,6 +105,7 @@ header .main-block .text-block .theatre-name {
   font-family: 'Open Sans Condensed';
   font-weight: 700;
   font-size: 64px;
+  letter-spacing: 0.1em;
 }
 header .main-block .text-block .theatre-is {
   font-family: 'Open Sans';
@@ -675,13 +686,362 @@ footer p {
     padding-top: 160px;
   }
   section.under-our-works .content .years p {
-    line-height: 65px !important;
-    font-size: 50px !important;
+    line-height: 65px;
+    font-size: 50px;
   }
   section.under-our-works .content .features .text p {
-    line-height: 45px !important;
-    font-size: 25px !important;
+    line-height: 45px;
+    font-size: 25px;
   }
+}
+@media (max-width: 900px) {
+  header {
+    height: 800px;
+  }
+  header aside.media-info {
+    display: none;
+    max-width: 300px;
+    width: 100%;
+    height: inherit;
+  }
+  header aside.media-info .rectangle {
+    background: #333333;
+  }
+  header aside.media-info .content .text {
+    display: none;
+  }
+  header aside.media-info .icons {
+    margin: -105px 0 0 0;
+    width: 70px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header aside.media-info .icons img {
+    width: 25px;
+    height: 26px;
+  }
+  header nav {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+  }
+  header nav ul.navigation-list {
+    position: absolute;
+    z-index: 5;
+    top: 98px;
+    left: 39px;
+    display: none;
+    max-width: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header nav ul.navigation-list li {
+    cursor: pointer;
+    margin: 0 0 -52px 0;
+  }
+  header nav ul.navigation-list li:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  header nav li.number {
+    position: absolute;
+    z-index: 5;
+    top: 14px;
+    right: 39px;
+  }
+  header .open-menu {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    display: block;
+    background: transparent;
+    border: none;
+  }
+  header div.main-block {
+    max-width: 600px;
+    margin: 190px auto 405px;
+  }
+  header div.main-block .text-block {
+    text-align: left;
+  }
+  header div.main-block .text-block button {
+    margin: 0;
+  }
+
+  section.about-theatre {
+    max-width: 504px;
+  }
+  section.about-theatre .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  section.about-theatre .content .text {
+    max-width: inherit;
+  }
+  section.about-theatre .content .about-numbers {
+    margin: 40px auto 0;
+  }
+
+  section.our-works .content {
+    max-width: 442px;
+    margin: 0 auto 140px;
+  }
+  section.our-works .content .img {
+    display: none;
+  }
+  section.our-works .content .img:first-child {
+    display: block;
+  }
+
+  section.under-our-works {
+    max-width: 100%;
+    margin: 150px auto 0;
+  }
+
+  section.our-partners {
+    margin: 150px auto 0;
+    max-width: 600px;
+  }
+  section.our-partners .content img:nth-child(4) {
+    display: none;
+  }
+  section.our-partners .content img:nth-child(3) {
+    display: none;
+  }
+
+  section.be-maecenas {
+    max-width: 509px;
+  }
+  section.be-maecenas .content .contacs {
+    margin-top: 50px;
+  }
+  section.be-maecenas .content .form .fields {
+    max-width: inherit;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto 0;
+  }
+  section.be-maecenas .content .form .fields input {
+    width: 230px;
+  }
+  section.be-maecenas .content .form .fields textarea {
+    margin-top: 28px;
+    width: 509px;
+  }
+  section.be-maecenas .content .form .button-message {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.be-maecenas .content .form .button-message p {
+    max-width: 435px;
+    text-align: center;
+    margin: 27px auto 0px;
+  }
+  section.be-maecenas .content .form .button-message button {
+    padding: 10px 20px 10px 20px;
+    width: 190px;
+    height: 50px;
+    margin: 1px auto 0;
+  }
+
+  section.be-maecenas::after {
+    bottom: -40px;
+  }
+
+  footer {
+    max-width: 509px;
+    margin: 75px auto 35px;
+  }
+}
+@media (max-width: 700px) {
+  header .main-block .text-block {
+    margin: 0 auto 0;
+    max-width: 450px;
+  }
+  header .main-block .text-block .theatre-name {
+    text-align: left;
+  }
+
+  section.our-partners {
+    max-width: 450px;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    height: 600px;
+  }
+  header aside.media-info .content {
+    top: 520px;
+  }
+  header aside.media-info .content .icons img {
+    width: 25px;
+    height: 26px;
+  }
+  header nav li.number {
+    font-size: 18px;
+    top: 0px;
+    right: 30px;
+  }
+  header .main-block {
+    margin: 160px auto 405px !important;
+  }
+  header .main-block .text-block {
+    text-align: center;
+    max-width: 300px;
+  }
+  header .main-block .text-block .theatre-name {
+    text-align: right;
+    font-size: 35px;
+  }
+  header .main-block .text-block .theatre-is {
+    text-align: right;
+  }
+  header .main-block .text-block button {
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    float: right;
+  }
+
+  section.about-theatre {
+    margin: 100px auto 0;
+    max-width: 300px;
+  }
+  section.about-theatre .name {
+    margin-bottom: 30px;
+  }
+
+  section.our-works {
+    margin: 100px auto 0;
+  }
+  section.our-works .name {
+    margin-bottom: 30px;
+  }
+
+  section.under-our-works {
+    margin-top: -40px;
+    height: 400px;
+  }
+  section.under-our-works .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 300px;
+    padding: 115px;
+  }
+  section.under-our-works .content .years {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: inherit;
+  }
+  section.under-our-works .content .years p {
+    margin-right: 25px;
+    font-size: 25px;
+    line-height: 40px;
+  }
+  section.under-our-works .content .years p::last-child {
+    margin: 0;
+  }
+  section.under-our-works .content .features .stars {
+    margin: 0 auto 15px;
+  }
+  section.under-our-works .content .features .text p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  section.our-partners {
+    margin: 100px auto 0;
+    max-width: 300px;
+  }
+  section.our-partners .name {
+    margin-bottom: 30px;
+  }
+  section.our-partners .content img:nth-child(2) {
+    display: none;
+  }
+  section.our-partners .content img:nth-child(1) {
+    display: none;
+  }
+
+  section.be-maecenas {
+    margin: 100px auto 0;
+    max-width: 300px;
+  }
+  section.be-maecenas .name {
+    margin-bottom: 30px;
+  }
+  section.be-maecenas .content .form {
+    margin: 0 auto 0;
+  }
+  section.be-maecenas .content .form .fields input, section.be-maecenas .content .form .fields textarea {
+    width: 300px;
+  }
+  section.be-maecenas .content .form .fields .column1 {
+    margin-bottom: 29px;
+  }
+
+  footer {
+    max-width: 300px;
+  }
+}
+@media (max-width: 450px) {
+  section.under-our-works .content {
+    padding-top: 80px;
+  }
+  section.under-our-works .content .features .text {
+    font-size: 12px;
+  }
+  section.under-our-works .content .features .stars img:nth-child(6) {
+    display: none;
+  }
+  section.under-our-works .content .features .stars img:nth-child(5) {
+    display: none;
+  }
+}
+.enable-menu {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.enable-menu-field {
+  display: block !important;
+}
+
+.disable-button {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */
