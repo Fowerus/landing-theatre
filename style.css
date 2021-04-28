@@ -1044,4 +1044,12 @@ footer p {
   display: none !important;
 }
 
+.move-number {
+  left: 39px !important;
+}
+
+.move-number::after {
+  content: none !important;
+}
+
 /*# sourceMappingURL=style.css.map */

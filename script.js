@@ -5,6 +5,7 @@ $(document).ready(function(){
 
 		$('header aside.media-info').addClass('enable-menu-field');
 		$('header nav ul.navigation-list').addClass('enable-menu');
+		$('header nav li.number').addClass('move-number');
 	})
 
 
@@ -13,5 +14,6 @@ $(document).ready(function(){
 		$('header button.open-menu').removeClass('disable-button');
 		$('header aside.media-info').removeClass('enable-menu-field');
 		$('header nav ul.navigation-list').removeClass('enable-menu');
+		$('header nav li.number').removeClass('move-number');
 	})
 })
